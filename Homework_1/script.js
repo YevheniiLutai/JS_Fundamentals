@@ -64,8 +64,8 @@
 
     let m;
     let n = null;
-
-    console.log("Type 6: ", typeof n, typeof m);
+   
+    console.log("Type 6: ", n, m);
     //----------------------------------------------------------
 
 
