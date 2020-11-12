@@ -1,5 +1,4 @@
-    
-    //--------------------------------------------------- Task_2
+
     //Task_2 ---------------------------------------------------
 
     console.log("Task 2: Lutai");
@@ -11,14 +10,16 @@
 
     let a = 5;
     let b = 10;
-    console.log("Task 3:", a, b);
-    a = b;
-    console.log("Task 3:", a);
+    alert("Task 3(c): " + "a = " + a + ", " + "b = " + b);
+    console.log("Task 3(c): ", "a = ", a, ", ", "b = ", b);
+    alert("Task 3(e): " + "a = " + a + ", " + "b = " + b);
+    console.log("Task 3(e): ", "a = ", a, ", ", "b = ", b);
    
     //----------------------------------------------------------
 
 
     //Task_4 ---------------------------------------------------
+
     let x;
     let first_object = {
         String: "Yevhenii", 
@@ -66,6 +67,7 @@
     let n = null;
    
     console.log("Type 6: ", n, m);
+
     //----------------------------------------------------------
 
 
@@ -92,7 +94,7 @@
     let month_31 = day * 31;
 
     //Spaces for a better view in alert window
-    alert("Sencond in hour: " + hour + ";                                                                        " +
+    alert("Second in hour: " + hour + ";                                                                        " +
     "Second in day: " + day + ";                                                                      " +
     "Second in month(28 days): " + month_28 + ";                                            " +
     "Second in month(29 days): " + month_29 + ";                                            " +
