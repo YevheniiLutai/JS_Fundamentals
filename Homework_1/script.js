@@ -12,6 +12,7 @@
     let b = 10;
     alert("Task 3(c): " + "a = " + a + ", " + "b = " + b);
     console.log("Task 3(c): ", "a = ", a, ", ", "b = ", b);
+    a = b;
     alert("Task 3(e): " + "a = " + a + ", " + "b = " + b);
     console.log("Task 3(e): ", "a = ", a, ", ", "b = ", b);
    
