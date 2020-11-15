@@ -67,7 +67,7 @@
     let m;
     let n = null;
    
-    console.log("Type 6: ", n, m);
+    console.log("Task 6: ", n, m);
 
     //----------------------------------------------------------
 
