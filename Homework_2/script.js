@@ -79,9 +79,6 @@ console.log("Task 5.7:", task3[4]);
 
 console.log("Task 5.8:", task3.shift);
 
-
-
-
 //----------------------------------------------------------
 
 
@@ -89,9 +86,7 @@ console.log("Task 5.8:", task3.shift);
 
 let cities = ["Rome", "Lviv", "Warsaw"];
 
-let cities_string = cities.map(function(city) {return city + "*"});
-
-console.log(cities_string);
+console.log(cities.join('*'));
 
 //----------------------------------------------------------
 
