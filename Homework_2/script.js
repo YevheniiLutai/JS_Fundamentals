@@ -4,7 +4,7 @@
 let x = 1;
 let y = 2;
 
-let res1 = String(x + y);
+let res1 = String(x) + y;
 console.log("Task 1.1:", res1); // "12"
 console.log("Task 1.1:", typeof res1); // "string"
 
@@ -36,7 +36,7 @@ if (number >= 0 && number % 2 == 0) {
 else if (number < 0) {
     console.log("Task 2(a): Even but not positive number");
 }
-if (number % 2 != 0){
+else if (number % 2 != 0){
     console.log("Task 2(a): Positive but not even number");
 }
 else if(number < 0 && number % 2 != 0) {
@@ -62,12 +62,14 @@ task3[1] = "Yevhenii";
 task3[2] = true;
 task3[3] = null;
 
-console.log("Task 5.5:", task3.length);
+console.log("Task 3.5:", task3.length);
 
 task3[4] = prompt("Enter five's element:", "Lutai");
 
-console.log("Task 5.7:", task3[4]);
-console.log("Task 5.8:", task3.shift);
+console.log("Task 3.7:", task3[4]);
+console.log("Task 3.8, before delete first element:", task3);
+task3.shift();
+console.log("Task 3.8, after delete first element:", task3);
 
 //----------------------------------------------------------
 
@@ -100,7 +102,7 @@ else {
 
 //Task_6 ---------------------------------------------------
 
-let a = Number(prompt("Enter size a: ", "10"));
+let a = Number(prompt("Enter size a: ", "3"));
 if (a < 0) {
     alert("Incorect data!");
     console.log("Task 6: Incorect data! A is negative number");
@@ -112,7 +114,7 @@ if (b < 0) {
     console.log("Task 6: Incorect data! B is negative number");
 }
 
-let c = Number(prompt("Enter size c: ", "11"));
+let c = Number(prompt("Enter size c: ", "5"));
 if (c < 0) {
     alert("Incorect data!");
     console.log("Task 6: Incorect data! C is negative number");
@@ -127,10 +129,9 @@ let S = Math.sqrt(p*(p - a)*(p - b)*(p - c));
 console.log("Task 6: Area of a triangle: ", +S.toFixed(3));
 
 // C^2 = A^2 + B^2 - Pythagorean theorem
-let powC = c * c;
 let sumPowAB = a * a + b * b;
 
-if (powC == sumPowAB) {
+if (c * c == a * a + b * b) {
     console.log("Task 6: This triangle with at right angles");
 }
 else {
