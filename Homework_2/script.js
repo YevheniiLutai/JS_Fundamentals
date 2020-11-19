@@ -123,13 +123,11 @@ if (c < 0) {
 //S = sqrt(p*(p - a)*(p - b)*(p - c)) - Heron's formula
 
 let p = (a + b + c) / 2; // Semiperimeter formula
-
 let S = Math.sqrt(p*(p - a)*(p - b)*(p - c)); 
 
 console.log("Task 6: Area of a triangle: ", +S.toFixed(3));
 
 // C^2 = A^2 + B^2 - Pythagorean theorem
-let sumPowAB = a * a + b * b;
 
 if (c * c == a * a + b * b) {
     console.log("Task 6: This triangle with at right angles");
@@ -145,25 +143,17 @@ else {
 
 let time = (new Date().getHours());
  
-if (time == 23 || time == 00 || time == 1 || time == 2 || time == 3 || time == 4 || time == 5){
-
-    console.log("Good night! Time is", time, "hour");
-
+if (time == 23 || time == 00 || time == 1 || time == 2 || time == 3 || time == 4 || time == 5) {
+    console.log("Task 7: Good night! Time is", time, "hour");
 }
-else if (time == 6 || time == 7 || time == 8 || time == 9 || time == 10 || time == 11){
-
-    console.log("Good morning! Time is", time, "hour");
-
+else if (time == 6 || time == 7 || time == 8 || time == 9 || time == 10 || time == 11) {
+    console.log("Task 7: Good morning! Time is", time, "hour");
 }
-else if (time == 12 || time == 13 || time == 14 || time == 15 || time == 16 || time == 17){
-
-    console.log("Good day! Time is", time, "hour");
-
+else if (time == 12 || time == 13 || time == 14 || time == 15 || time == 16 || time == 17) {
+    console.log("Task 7: Good day! Time is", time, "hour");
 }
-else if (time == 18 || time == 19 || time == 20 || time == 21 || time == 22){
-
-    console.log("Good evening! Time is", time, "hour");
-
+else if (time == 18 || time == 19 || time == 20 || time == 21 || time == 22) {
+    console.log("Task 7: Good evening! Time is", time, "hour");
 }
 
 //----------------------------------------------------------
