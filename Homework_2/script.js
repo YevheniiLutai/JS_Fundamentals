@@ -147,30 +147,30 @@ else {
 
 let time = (new Date().getHours());
  
-if (time == 23 || time == 00 || time == 1 || time == 2 || time == 3 || time == 4 || time == 5) {
+if (time >= 0 && time == 23) {
     console.log("Task 7.1: Good night! Time is", time, "hour");
 }
-else if (time == 6 || time == 7 || time == 8 || time == 9 || time == 10 || time == 11) {
+else if (time >= 6 && time <= 11) {
     console.log("Task 7.1: Good morning! Time is", time, "hour");
 }
-else if (time == 12 || time == 13 || time == 14 || time == 15 || time == 16 || time == 17) {
+else if (time >= 12  && time <= 17) {
     console.log("Task 7.1: Good day! Time is", time, "hour");
 }
-else if (time == 18 || time == 19 || time == 20 || time == 21 || time == 22) {
+else if (time >= 18  && time <= 22) {
     console.log("Task 7.1: Good evening! Time is", time, "hour");
 }
 
 switch(true) {
-    case (time == 23 || time == 00 || time == 1 || time == 2 || time == 3 || time == 4 || time == 5):
+    case (time >= 0 && time == 23):
         console.log("Task 7.2: Good night! Time is", time, "hour");
         break;
-    case (time == 6 || time == 7 || time == 8 || time == 9 || time == 10 || time == 11):
+    case (time >= 6 && time <= 11):
         console.log("Task 7.2: Good morning! Time is", time, "hour");
         break;
-    case (time == 12 || time == 13 || time == 14 || time == 15 || time == 16 || time == 17):
+    case (time >= 12  && time <= 17):
         console.log("Task 7.2: Good day! Time is", time, "hour");
         break;
-    case (time == 18 || time == 19 || time == 20 || time == 21 || time == 22):
+    case (time >= 18  && time <= 22):
         console.log("Task 7.2: Good evening! Time is", time, "hour");
         break;
 }
