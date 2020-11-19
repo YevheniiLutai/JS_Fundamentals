@@ -62,7 +62,7 @@ task3[1] = "Yevhenii";
 task3[2] = true;
 task3[3] = null;
 
-console.log("Task 3.5:", task3.length);
+console.log("Task 3.5: Number of elements in array", task3.length);
 
 task3[4] = prompt("Enter five's element:", "Lutai");
 
@@ -121,20 +121,25 @@ if (c < 0) {
 }
 
 //S = sqrt(p*(p - a)*(p - b)*(p - c)) - Heron's formula
-
-let p = (a + b + c) / 2; // Semiperimeter formula
-let S = Math.sqrt(p*(p - a)*(p - b)*(p - c)); 
-
-console.log("Task 6: Area of a triangle: ", +S.toFixed(3));
-
-// C^2 = A^2 + B^2 - Pythagorean theorem
-
-if (c * c == a * a + b * b) {
-    console.log("Task 6: This triangle with at right angles");
+if (a < 0 || b < 0 || c < 0) {
+    console.log("Task 6: Incorect date!")
 }
 else {
-    console.log("Task 6: This triangle without at right angles");
+    let p = (a + b + c) / 2; // Semiperimeter formula
+    let S = Math.sqrt(p*(p - a)*(p - b)*(p - c)); 
+
+    console.log("Task 6: Area of a triangle: ", +S.toFixed(3));
+
+    // C^2 = A^2 + B^2 - Pythagorean theorem
+
+    if (c * c == a * a + b * b) {
+        console.log("Task 6: This triangle with at right angle");
+    }
+    else {
+        console.log("Task 6: This triangle without at right angle");
+    }
 }
+
 
 //----------------------------------------------------------
 
