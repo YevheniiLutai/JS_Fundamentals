@@ -1,24 +1,23 @@
 
 //Task_1 ---------------------------------------------------
 
-let number = [7, 1, 14, 19, 27]
-let sum = 0;
-
+let number = [2, 3, 4, 5];
+let prod = 1;
 
 for(let i = 0; i < number.length; i++ ) {
-    sum += number[i];
-}
+    prod *= number[i];
+};
 
-console.log("Task 1.1: Sum = " + sum);
+console.log("Task 1.1: Sum = " + prod);
 
 let j = 0;
-let sum1 = 0;
+let prod1 = 1;
 while(j < number.length) {
-    sum1 += number[j];
+    prod1 *= number[j];
     j++;
-}
+};
 
-console.log("Task 1.2: Sum = " + sum1);
+console.log("Task 1.2: Sum = " + prod1);
 
 //----------------------------------------------------------
 
@@ -26,13 +25,11 @@ console.log("Task 1.2: Sum = " + sum1);
 //Task_2 ---------------------------------------------------
 
 for(let i = 0; i <= 15; i++ ) {
-
     if(i % 2 == 0) {
-        console.log("Task 2:", i + " even");
-    }
-    else {
-        console.log("Task 2:", i + " odd");
-    }
+        console.log("Task 2:", i, "is even");
+    } else {
+        console.log("Task 2:", i, "is odd");
+    };
 };
 
 //----------------------------------------------------------
@@ -45,10 +42,10 @@ function randArray(k) {
     min = Math.ceil(1);
     max = Math.floor(500);
 
-
     for (let i = 0; i < k; i++) {
         Array.push(Math.floor(Math.random() * (max - min + 1)) + min);
     } 
+
     console.log("Task 3:", Array);
 };
 
@@ -65,7 +62,7 @@ let b = Number(prompt("Enter a", "3"));
 function raiseToDegree(a, b) {
     let powAB = Math.pow(a, b);
 
-    console.log("Task 4: ", powAB); 
+    console.log("Task 4: a^b =", a + '^' + b, '=', powAB); 
 };
 
 raiseToDegree(a, b);
@@ -120,27 +117,24 @@ console.log("Task 6:", findUnique([1, 2, 3, 5, 11]));
 //Task_7 ---------------------------------------------------
 
 function lastElement(arr, x) {
-    let i = 0;
-
 
     if (x == null) {
         return arr.pop();
     } else if (x >= arr.length) {
         return arr;
     } else {
-        while (i != x) {
-        arr.shift();
-        i++;
-    };
+        for(i = 0; i <= arr.length - x; i++){
+            arr.shift();
+        };
+
         return arr;
-    }
-    
+    };  
 };
 
 console.log("Task 7:", lastElement([3, 4, 10, -5]));      // -5
 console.log("Task 7:", lastElement([3, 4, 10, -5],2));   // [10, -5]
 console.log("Task 7:", lastElement([3, 4, 10, -5],8));   // [3, 4, 10, -5]
-
+console.log("Task 7:", lastElement([3, 4, 10, -5, 8, 5, 7],5)); 
 //----------------------------------------------------------
 
 
@@ -157,6 +151,7 @@ function changeString(text) {
             textArr[i + 1] = textArr[i + 1].toUpperCase();
         };
     };
+
     console.log("Task 8, after:", textArr.join(''));
 };
 
