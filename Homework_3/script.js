@@ -74,11 +74,8 @@ raiseToDegree(a, b);
 
 function findMin() {
     let arr = Array.from(arguments);
-
     console.log("Task 5:", arr);
-
     arr.sort();
-
     console.log("Task 5, min number =", arr[0]);
 };
 
@@ -91,7 +88,6 @@ findMin(7,4,-5,5,8);
 //Task_6 ---------------------------------------------------
 
 function findUnique(arr) {
-
     for (let i = 0; i < arr.length - 1; i++) {
         for (let j = i + 1; j < arr.length; j++) {
             if (arr[i] === arr[j]) {
@@ -117,7 +113,6 @@ console.log("Task 6:", findUnique([1, 2, 3, 5, 11]));
 //Task_7 ---------------------------------------------------
 
 function lastElement(arr, x) {
-
     if (x == null) {
         return arr.pop();
     } else if (x >= arr.length) {
@@ -141,7 +136,6 @@ console.log("Task 7:", lastElement([3, 4, 10, -5, 8, 5, 7],5));
 
 //Task_8 ---------------------------------------------------
 function changeString(text) {
-    
     console.log("Task 8, before:", text);
     textArr = text.split('');
     textArr[0] = textArr[0].toUpperCase();
