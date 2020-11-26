@@ -33,14 +33,12 @@ try {
 //Task_3 ---------------------------------------------------
 function checkAge() {
     let age = prompt('How old are you?', );
-    if (age == null) {
-        //alert("The field is empty! Please enter your age!");
+    console.log(typeof age);
+    if (age == null || age == 0) {
         throw Error("The field is empty! Please enter your age!");
     } else if (isNaN(age)) {
-       // alert("Not a Numebr!");
         throw TypeError("Not a Numebr!");
     } else if ( age < 14) {
-        //alert("Your age a less 14 years!");
         throw Error("Your age a less 14 years!")
     } else {
         alert("You can watch a film!");
@@ -76,7 +74,7 @@ function showMonthName(month) {
     };
 }
 try {
-    console.log("Task 4: " + showMonthName('12'));
+    console.log("Task 4: " + showMonthName(11));
 } catch(error) {
     console.log("Task 4: " + error.name + " " + error.message);
 };
