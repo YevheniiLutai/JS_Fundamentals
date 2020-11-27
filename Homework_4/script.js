@@ -32,8 +32,8 @@ try {
 
 //Task_3 ---------------------------------------------------
 function checkAge() {
-    let age = prompt('How old are you?', );
-    if (age == null || age == "") {
+    let age = prompt('How old are you?');
+    if (age == null || age.trim() == "") {
         throw Error("The field is empty! Please enter your age!");
     } else if (isNaN(age)) {
         throw TypeError("Not a Numebr!");
