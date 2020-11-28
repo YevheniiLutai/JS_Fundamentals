@@ -7,8 +7,7 @@ let mentor = {
 };
 
 function propsCount(currentObject) {
-    let size = Object.keys(currentObject).length;
-    console.log("Task 1:", size);
+    console.log("Task 1. Object length =", Object.keys(currentObject).length);
 };
 
 propsCount(mentor);
@@ -25,7 +24,8 @@ let something = {
 };
 
 function showProps(obj) {
-    
+    console.log("Task 2:", Object.values(obj));
+    console.log("Task 2:", Object.entries(obj))
 };
 
 showProps(something);
@@ -49,13 +49,11 @@ class Student extends Person {
         this.year = year;
         this.midleName = midleName;
     };
-    showFullName() {
-        super.showFullName();
-        return ("Task 3: " + this.name + " " + this.surname + " " + this.midleName);
+    showFullName(midleName) {
+        return ("Task 3: " + this.name + " " + this.surname + " " + midleName);
     };
     showCourse() {
-        let currentYear = (new Date().getFullYear());
-        let course = currentYear - this.year;
+        let course = (new Date().getFullYear()) - this.year;
         if (course > 6) {
             return "You are no longer a student!"
         } else if (course == 0) {
@@ -77,18 +75,75 @@ console.log("Task 3. Current course: " + stud1.showCourse()); //Current course: 
 
 //************************** Task_4 *************************
 class Worker {
+    #experience = 1.2;
     constructor(fullName, dayRate, workingDays) {
         this.fullName = fullName;
         this.dayRate = dayRate;
         this.workingDays = workingDays;
     };
+
+    set Exp(value) {
+        if (value < 0) {
+            return "Experience is negative";
+        }
+        this.#experience = value;
+    };
+
+    get Exp() {
+        return this.#experience;
+    }
+
     showSalary() {
         let salary = this.dayRate * this.workingDays;
         return salary;
     }
-    showSalaryWithExperience() {
 
+    showSalaryWithExperience() {
+        return this.showSalary() * this.#experience;
     };
+
+    showExperience() {
+        return this.#experience;
+    }
+};
+
+let worker1 = new Worker("Lutai Yevhenii", 48, 23);
+console.log("Task 4. Full name:", worker1.fullName);
+console.log("Task 4. " + worker1.fullName +  "salary: " + worker1.showSalary());
+console.log("Task 4. Experince = ", worker1.showExperience());
+console.log("Task 4. Salary with experience = ", worker1.showSalaryWithExperience());
+worker1.Exp = 1.5;
+console.log("Task 4. New experience = ", worker1.showExperience());
+console.log("Task 4. Salary with new experience = ", worker1.showSalaryWithExperience());
+
+let worker2 = new Worker("Jane Jankins", 25, 30);
+console.log("Task 4. Full name:", worker2.fullName);
+console.log("Task 4. " + worker2.fullName +  "salary: " + worker2.showSalary());
+console.log("Task 4. Experince = ", worker2.showExperience());
+console.log("Task 4. Salary with experience = ", worker2.showSalaryWithExperience());
+worker2.Exp = 1.5;
+console.log("Task 4. New experience = ", worker2.showExperience());
+console.log("Task 4. Salary with new experience = ", worker2.showSalaryWithExperience());
+
+let worker3 = new Worker("Elon Musk", 20, 22);
+console.log("Task 4. Full name:", worker3.fullName);
+console.log("Task 4. " + worker3.fullName +  "salary: " + worker3.showSalary());
+console.log("Task 4. Experince = ", worker3.showExperience());
+console.log("Task 4. Salary with experience = ", worker3.showSalaryWithExperience());
+worker3.Exp = 1.5;
+console.log("Task 4. New experience = ", worker3.showExperience());
+console.log("Task 4. Salary with new experience = ", worker3.showSalaryWithExperience());
+
+let workerArr = [worker1, worker2, worker3];
+
+workerArr.sort(function(a,b) {
+    return a.showSalaryWithExperience() - b.showSalaryWithExperience();
+})
+
+console.log("Task 4. Sorted salary:");
+
+for(let i = 0; i < workerArr.length; i++) {
+    console.log("Task 4: " + workerArr[i].fullName + ": " + workerArr[i].showSalaryWithExperience());
 };
 //-----------------------------------------------------------
 
@@ -110,8 +165,7 @@ class Triangle extends GeometricFigure {
         this.h = h;
     };
     getArea() {
-        let S = (this.a * this.h) / 2;
-        return S; 
+        return (this.a * this.h) / 2; 
     };
 };
 
@@ -121,8 +175,7 @@ class Square extends GeometricFigure {
         this.a = a;
     };
     getArea() {
-        let S = this.a * this.a;
-        return S;
+        return this.a * this.a;
     };
 };
 
@@ -132,17 +185,25 @@ class Circle extends GeometricFigure {
         this.radius = radius;
     };
     getArea() {
-        let S = Math.PI * this.radius * this.radius;
-        return S;
+        return Math.PI * this.radius * this.radius;
     };
 };
 
-function handleFigures() {
-
+function handleFigures(figures) { 
+    let arrArea = [];
+    for (let i = 0; i < figures.length; i++) {
+        if (figures[i] instanceof GeometricFigure) {
+            console.log(("Task 5. Geometric figure: " + figures[i].toString() + " - area:  " + figures[i].getArea()));
+            arrArea[i] = figures[i].getArea();
+        } else {
+            console.log("Task 5. Class with name " + figures[i].toString() + " not found!")
+        }
+    }
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    console.log("Task 5. Total area: " + arrArea.reduce(reducer));
 };
 
 const figures = [new Triangle(4, 5), new Square(7), new Circle(5)];
-console.log(figures);
-//console.log(handleFigures(figures));
+handleFigures(figures);
 
 //----------------------------------------------------------

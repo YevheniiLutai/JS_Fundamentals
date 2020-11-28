@@ -139,7 +139,7 @@ function changeString(text) {
     console.log("Task 8, before:", text);
     textArr = text.split('');
     textArr[0] = textArr[0].toUpperCase();
-
+    
     for (let i = 0; i < textArr.length; i++) {
         if(textArr[i] == ' ') {
             textArr[i + 1] = textArr[i + 1].toUpperCase();
