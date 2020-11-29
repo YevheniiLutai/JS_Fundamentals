@@ -109,7 +109,7 @@ class Worker {
 
 let worker1 = new Worker("Lutai Yevhenii", 48, 23);
 console.log("Task 4. Full name:", worker1.fullName);
-console.log("Task 4. " + worker1.fullName +  "salary: " + worker1.showSalary());
+console.log("Task 4. " + worker1.fullName +  " salary: " + worker1.showSalary());
 console.log("Task 4. Experince = ", worker1.showExperience());
 console.log("Task 4. Salary with experience = ", worker1.showSalaryWithExperience());
 worker1.Exp = 1.5;
@@ -118,7 +118,7 @@ console.log("Task 4. Salary with new experience = ", worker1.showSalaryWithExper
 
 let worker2 = new Worker("Jane Jankins", 25, 30);
 console.log("Task 4. Full name:", worker2.fullName);
-console.log("Task 4. " + worker2.fullName +  "salary: " + worker2.showSalary());
+console.log("Task 4. " + worker2.fullName +  " salary: " + worker2.showSalary());
 console.log("Task 4. Experince = ", worker2.showExperience());
 console.log("Task 4. Salary with experience = ", worker2.showSalaryWithExperience());
 worker2.Exp = 1.5;
@@ -127,7 +127,7 @@ console.log("Task 4. Salary with new experience = ", worker2.showSalaryWithExper
 
 let worker3 = new Worker("Elon Musk", 20, 22);
 console.log("Task 4. Full name:", worker3.fullName);
-console.log("Task 4. " + worker3.fullName +  "salary: " + worker3.showSalary());
+console.log("Task 4. " + worker3.fullName +  " salary: " + worker3.showSalary());
 console.log("Task 4. Experince = ", worker3.showExperience());
 console.log("Task 4. Salary with experience = ", worker3.showSalaryWithExperience());
 worker3.Exp = 1.5;
