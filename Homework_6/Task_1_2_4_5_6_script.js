@@ -58,10 +58,10 @@ document.getElementsByTagName('span')[1].style.opacity = '0'; //second variant
 let text1 = prompt("Enter something to input 1: ", 'Hello 1');
 let text2 = prompt("Enter something to input 2: ", 'Hello 2');
 
-document.getElementById('input1').value = text1;
-document.getElementById('input2').value = text2;
+document.getElementById('input1').value = text2;
+document.getElementById('input2').value = text1;
 
-document.getElementById('input3').value = text2;
-document.getElementById('input4').value = text1;
+document.getElementById('input3').value = text1;
+document.getElementById('input4').value = text2;
 
 //-----------------------------------------------------------\\
