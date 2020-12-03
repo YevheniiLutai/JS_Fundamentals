@@ -18,7 +18,7 @@ alert((document.querySelector('img').outerHTML = '<img class="image" src="images
 
 //************************** Task_4 *************************\\
 
-let elem = document.getElementById('list');
+const elem = document.getElementById('list');
 
 alert(
     elem.firstElementChild.innerHTML + ", " +
@@ -28,7 +28,7 @@ alert(
     elem.firstElementChild.nextElementSibling.nextElementSibling.innerHTML 
 )
 
-let elems = document.querySelector('#list').children; 
+const elems = document.querySelector('#list').children; 
 
 alert(
     elems[0].innerHTML + ", " +
