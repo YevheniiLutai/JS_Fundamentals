@@ -94,7 +94,7 @@ function CitiesInCountry() {
 };
 
 function CountryAndCity() {
-    document.getElementsByTagName('p')[6].innerHTML = listOfCountry.options[listOfCountry.selectedIndex].text + ", " + listOfCity.options[listOfCity.selectedIndex].text;
+    document.getElementsByTagName('p')[lastChild].innerHTML = listOfCountry.options[listOfCountry.selectedIndex].text + ", " + listOfCity.options[listOfCity.selectedIndex].text;
 }
 
 listOfCountry.addEventListener('change', CitiesInCountry);
