@@ -1,5 +1,5 @@
 //************************** Task_1 *************************\\
-let newWin = window.open("about:blank", "Lutai Yevhenii", "width=300,height=300");
+let newWin = window.open("", "", "width=300,height=300");
 
 setTimeout(() => {
   newWin.resizeTo(500, 500);
@@ -94,7 +94,7 @@ function CitiesInCountry() {
 };
 
 function CountryAndCity() {
-    document.getElementsByTagName('p')[lastChild].innerHTML = listOfCountry.options[listOfCountry.selectedIndex].text + ", " + listOfCity.options[listOfCity.selectedIndex].text;
+    document.getElementsByTagName('p')[6].innerHTML = listOfCountry.options[listOfCountry.selectedIndex].text + ", " + listOfCity.options[listOfCity.selectedIndex].text;
 }
 
 listOfCountry.addEventListener('change', CitiesInCountry);

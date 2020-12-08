@@ -1,36 +1,30 @@
 //************************** Task_1 *************************\\
 function upperCase(str) {
     regexp = /^[A-Z]/;
+
     if (regexp.test(str)) {
         console.log("String's not starts with uppercase character");
     } else {
-        console.log("String's starts with uppercase character")
+    
+      console.log("String's starts with uppercase character")
     };
 };
 
 upperCase('Afdsf');
 //-----------------------------------------------------------\\
+function checkEmail(str) { 
+    regexp = /\w+@/;
+    
+    if (regexp.test(str)) {
+          return true;
+    } else {
+          return false;
+    }   
+}
 
+console.log(checkEmail("aaaa@aaa.aaa"));
 //************************** Task_2 *************************\\
 
-function count (string) {  
-    let rezult = new Object()
-    let arr = string.split('')
-
-    //console.log(rezult[arr[1]] = 1);
-    for(let i = 0; i < arr.lenght; i++) {
-      for(let j = 0; j < arr.lenght; j++) {
-        if(arr[i] === arr[j]) {
-          rezult[arr[i]] = rezult[arr[i]] + 1;
-        } else {
-          rezult[arr[i]] = 1;
-        }
-      }
-    }
-     console.log(rezult);
-  }
-
-  count('aassd')
 //-----------------------------------------------------------\\
 
 //************************** Task_3 *************************\\
@@ -40,6 +34,11 @@ function count (string) {
 //-----------------------------------------------------------\\
 
 //************************** Task_5 *************************\\
+function replaceWords(str) {
+    console.log(str.replace("$1 $2"))
+}
+
+replaceWords('Love JS');
 //-----------------------------------------------------------\\
 
 //************************** Task_6 *************************\\
