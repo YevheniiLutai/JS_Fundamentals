@@ -28,20 +28,43 @@ console.log(checkEmail("aaaa@aaa.aaa"));
 //-----------------------------------------------------------\\
 
 //************************** Task_3 *************************\\
+function findDB(str) {
+   let regexp = /[^d]/;
+   let arrStr = str.match(regexp);
+   console.log(arrStr);
+};
+
+findDB("cdbBdbsbz");
 //-----------------------------------------------------------\\
 
 //************************** Task_4 *************************\\
+
+function checkSelectedInput() {
+  let  tagInputCheked = document.querySelectorAll('input:checked')
+    if (tagInputCheked.length == 3) {
+        document.querySelectorAll('input').forEach(elem => elem.disabled=true);
+    }
+}
 //-----------------------------------------------------------\\
 
 //************************** Task_5 *************************\\
 function replaceWords(str) {
-    console.log(str.replace("$1 $2"))
+    console.log(str.replace(/(\w+)\s(\w+)/, '$1, $2'))
 }
 
-replaceWords('Love JS');
+replaceWords('Java Script');
 //-----------------------------------------------------------\\
 
 //************************** Task_6 *************************\\
+function checkCreditCard(number) {
+    if(/^\d{4}\-\d{4}\-\d{4}\-\d{4}/.test(number)) {
+        console.log("Cadr is correct");
+    } else {
+        console.log("Card isn't correct");
+  };
+};
+
+checkCreditCard("9999-9999-9999-9999")
 //-----------------------------------------------------------\\
 
 //************************** Task_7 *************************\\
