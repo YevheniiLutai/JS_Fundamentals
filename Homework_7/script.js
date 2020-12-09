@@ -85,7 +85,7 @@ let listOfCities = {
 
 function CitiesInCountry() {
     let countryName = listOfCountry.value;
-    listOfCity.textContent = "";
+    listOfCity.innerText = "";
     for (let i = 0; i < listOfCities[countryName].length; i++) {
         let addCity = document.createElement("option");
         addCity.textContent = listOfCities[countryName][i];
