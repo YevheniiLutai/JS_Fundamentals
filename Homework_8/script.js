@@ -22,7 +22,7 @@ function checkEmail(str) {
     }
 }
 
-console.log('Task 2: ' + checkEmail("Qmail2@gmail..com"));
+console.log('Task 2: ' + checkEmail("Qmail2@gmail.com"));
 //-----------------------------------------------------------\\
 
 //************************** Task_3 *************************\\
@@ -56,7 +56,7 @@ checkCreditCard("9999-9999-9999-9999")
 
 //************************** Task_6 *************************\\
 function strongCheckEmail(str) {
-    let regexp = /^[a-zA-Z0-9]+[\w]*-?[\w]*@[a-z]+\.[a-z]+$/ 
+    let regexp = /^[A-Za-z0-9]+[\w]*-?[\w]*@[a-z]+\.[a-z]+$/ 
     if (regexp.test(str)) {
         return console.log("Task 6: Email is correct!");
     } else {
