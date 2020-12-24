@@ -12,7 +12,7 @@ OS type: ${os.type()}<br>
 System work time: ${((os.uptime()) / 60).toFixed(2)} minutes<br>
 Current work directory:  ${__dirname}<br>
 Server file name: ${path.basename(__filename)}</p>`);
-esponse.end();
+response.end();
 }).listen(8000);
 //-----------------------------------------------------------\\
 
