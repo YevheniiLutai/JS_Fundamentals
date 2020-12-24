@@ -13,7 +13,7 @@ System work time: ${((os.uptime()) / 60).toFixed(2)} minutes<br>
 Current work directory:  ${__dirname}<br>
 Server file name: ${path.basename(__filename)}</p>`);
 esponse.end();
-}).listen(5000);
+}).listen(800);
 //-----------------------------------------------------------\\
 
 //************************** Task_2 *************************\\
@@ -24,6 +24,6 @@ esponse.end();
 // http.createServer((request, response) => {
 // response.writeHead(200, {'Content-Type': 'text/plain'});
 // response.end(`${personalModule.greet(os.userInfo().username)}`);
-// }).listen(5000);
+// }).listen(8000);
 
 //-----------------------------------------------------------\\
