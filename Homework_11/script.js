@@ -1,5 +1,5 @@
-
-//************************** Task_1 *************************\\
+//**** To run Task 1: comment Task 2 and uncomment Task 1 ****\\
+//************************** Task_1 **************************\\
 const path = require("path");
 const http = require("http");
 const os = require("os");
@@ -16,8 +16,8 @@ esponse.end();
 }).listen(8000);
 //-----------------------------------------------------------\\
 
-//************************** Task_2 *************************\\
-    
+//**** To run Task 2: comment Task 1 and uncomment Task 2 ****\\
+//************************** Task_2 **************************\\
 // const http = require("http");
 // const os = require("os");
 // const personalModule = require('./personalmodule');
@@ -25,5 +25,4 @@ esponse.end();
 // response.writeHead(200, {'Content-Type': 'text/plain'});
 // response.end(`${personalModule.greet(os.userInfo().username)}`);
 // }).listen(8000);
-
 //-----------------------------------------------------------\\
